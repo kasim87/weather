@@ -1,0 +1,196 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root { 
+    --background-color: #090c21; 
+    --secondary-color: #eb1555; 
+    --primary-color-light: #1d1f33; 
+    --roboto-font: "Roboto"; 
+    --active-element-color-light: #3e4054; 
+  }  
+
+body{
+    background-color: var(--background-color)
+}
+
+.main{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    background-color: var(--background-color);
+    gap: 20px;
+    padding: 20px;
+}
+
+.popular_cities_block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    grid-column: span 3;
+    background-color: var(--primary-color-light);
+
+    .popular_cities_row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        column-gap: 50px;
+        padding: 20px;
+
+        .popular_city{
+            display: flex;
+            column-gap: 10px;
+
+            .circle{
+                background-color: white;
+                border-radius: 50%;
+                width: 75px;
+                height: 75px;
+                text-align: center;
+            }
+
+            .popular_city_info{
+                h2{
+                    color: white
+                }
+                p{
+                    color: var(--secondary-color)
+                }
+                h1{
+                    color: white
+                }
+            }
+        }
+    };
+
+    .search_cities_row{
+        display: flex;
+        column-gap: 20px;
+        margin-bottom: 20px;
+        align-items: center;
+
+        label{
+            color: white;
+        }
+        input{
+        }
+        button{
+            background-color: var(--background-color);
+            color: white;
+            padding: 5px;
+            border: none;
+        }
+    }
+}
+.user_cities_block{
+    grid-column: span 1;
+    background-color: var(--primary-color-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    padding: 20px;
+
+    .city_info{
+        color: white;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        row-gap: 20px;
+
+        h2{
+            font-size: 36px;
+        }
+        h1{
+            font-size: 50px;
+        }
+        h3{
+            font-size: 30px;
+        }
+        p{
+           font-size: 24px; 
+            color: var(--secondary-color);
+        }
+    }
+
+    .city_wheather{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 10px;
+
+        img{
+        }
+        h1{
+            color: white;
+        }
+        p{
+            text-align: center;
+            color: var(--active-element-color-light);
+        }
+    }
+}
+
+.find_cities_block{
+    grid-column: span 2;
+    padding-left: 50px;
+    padding-right: 50px;
+    color: white;
+    border-radius: 20px;
+
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+
+    background-color: var(--primary-color-light);
+
+    .city_info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+        width: 40%;
+        background: url("/src/images/your_city_bg.png") center no-repeat;
+        background-size: cover;
+        border-radius: 20px;
+        padding-top: 80px;
+        padding-bottom: 80px;
+
+        h2{
+            font-size: 36px;
+        }
+        h1{
+            font-size: 50px;
+        }
+        h3{
+            font-size: 30px;
+        }
+        p{
+           font-size: 24px; 
+            color: var(--secondary-color);
+        }
+    }
+
+    .city_wheather{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 10px;
+        width: 60%;
+
+        img{
+            width: 100px;
+        }
+        h1{
+            color: white;
+        }
+        p{
+            text-align: center;
+            color: var(--active-element-color-light);
+        }
+    }
+}
